@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css';
+import styles from './App.css';
 
 function App() {
   const [time, setTimer] =React.useState(0)
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div id="table-container">
         <table>
 
         {/* 100th of sec 99 back to zero so %100*/}
@@ -34,7 +34,7 @@ function App() {
         </table>
         
       </div>
-      <div>
+      <div id="container">
         {!timerOn &&  time ===0 &&(
           <button onClick = {()=>setTimerOn(true)}>Start</button>
         )}
